@@ -1,0 +1,9 @@
+{
+  "name": "eye-comfort-palette",
+  "version": "1.0.0",
+  "private": true,
+  "description": "网页配色切换器用户脚本：一键把深色网页切换为白底黑字等护眼配色",
+  "scripts": {
+    "test": "node --check eye-comfort-palette.user.js && node test/smoke.js"
+  }
+}

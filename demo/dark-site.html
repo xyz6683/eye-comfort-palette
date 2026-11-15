@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>深色主题演示站 · Webpage Color Changer 验收测试页</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0d1117;
+    color: #c9d1d9;
+    font: 16px/1.7 -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  header {
+    position: sticky; top: 0;
+    background: #010409;
+    border-bottom: 1px solid #30363d;
+    padding: 14px 32px;
+    display: flex; gap: 24px; align-items: center;
+  }
+  header .logo { color: #f0f6fc; font-weight: 700; }
+  header a { color: #8b949e; text-decoration: none; }
+  header a:hover { color: #58a6ff; }
+  .hero {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 55%, rgba(31,111,235,.18) 100%);
+    padding: 64px 32px;
+    text-align: center;
+  }
+  .hero h1 { color: #f0f6fc; font-size: 40px; margin: 0 0 12px; }
+  .hero p { color: #8b949e; max-width: 640px; margin: 0 auto; }
+  main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
+  .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .card h2 { color: #f0f6fc; margin-top: 0; }
+  a { color: #58a6ff; }
+  a:visited { color: #bc8cff; }
+  code {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 2px 6px;
+    color: #79c0ff;
+  }
+  pre {
+    background: #010409;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 16px;
+    overflow: auto;
+  }
+  pre code { background: transparent; border: none; padding: 0; }
+  blockquote {
+    border-left: 4px solid #30363d;
+    margin: 16px 0;
+    padding: 4px 16px;
+    color: #8b949e;
+    background: #161b22;
+  }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #30363d; padding: 8px 12px; text-align: left; }
+  th { background: #161b22; color: #f0f6fc; }
+  input, textarea, select, button {
+    background: #010409;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font: inherit;
+  }
+  input::placeholder, textarea::placeholder { color: #6e7681; }
+  button { background: #21262d; cursor: pointer; }
+  button.primary { background: #238636; border-color: #238636; color: #ffffff; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .grid .card { margin: 0; }
+  .dark-block {
+    background: #010409;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    color: #f0f6fc;
+  }
+  .dark-block p { margin: 0; }
+  img.sample {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    display: block;
+    margin: 16px 0;
+  }
+  footer {
+    background: #010409;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+    text-align: center;
+    padding: 24px;
+  }
+  mark { background: #bb8009; color: #ffffff; padding: 0 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <header>
+    <span class="logo">深色演示站</span>
+    <a href="#text">正文</a>
+    <a href="#code">代码</a>
+    <a href="#table">表格</a>
+    <a href="#form">表单</a>
+    <a href="#media">媒体</a>
+  </header>
+
+  <div class="hero">
+    <h1>这是一个黑底白字的页面</h1>
+    <p>模拟现实中常见的深色主题网站：深色导航、渐变 Hero、深色卡片与代码块。
+      用「网页配色切换器」把它切换成白底黑字，验证覆盖是否彻底、图片是否被误伤。</p>
+  </div>
+
+  <main>
+    <div class="card" id="text">
+      <h2>正文与链接</h2>
+      <p>
+        这是一段正文文字，包含一个<a href="#">普通链接</a>、一个<a href="https://example.com/">已访问链接</a>、
+        一段<code>行内代码</code>、一处<mark>高亮标记</mark>，以及<strong>加粗</strong>和<em>斜体</em>。
+      </p>
+      <blockquote>这是引用块：深色卡片背景 + 左侧边框，切换后应变为白底黑字。</blockquote>
+    </div>
+
+    <div class="card" id="code">
+      <h2>代码块</h2>
+      <pre><code>function hello(name) {
+  console.log("Hello, " + name + "!");
+  return name.toUpperCase();
+}</code></pre>
+    </div>
+
+    <div class="card" id="table">
+      <h2>表格</h2>
+      <table>
+        <tr><th>配色</th><th>背景</th><th>文字</th><th>状态</th></tr>
+        <tr><td>白底黑字</td><td>#ffffff</td><td>#1b1b1b</td><td>可用</td></tr>
+        <tr><td>护眼米黄</td><td>#f7f0e0</td><td>#3d3224</td><td>可用</td></tr>
+        <tr><td>柔和深色</td><td>#1f1f1f</td><td>#d6d6d6</td><td>可用</td></tr>
+      </table>
+    </div>
+
+    <div class="card" id="form">
+      <h2>表单控件</h2>
+      <p>
+        <input type="text" placeholder="输入框占位文字"><br><br>
+        <input type="checkbox" id="c1" checked> <label for="c1">复选框</label>&nbsp;&nbsp;
+        <input type="radio" name="r" id="r1" checked> <label for="r1">单选项</label><br><br>
+        <textarea rows="3" placeholder="多行文本框"></textarea><br><br>
+        <select><option>下拉选项一</option><option>下拉选项二</option></select>&nbsp;&nbsp;
+        <button>普通按钮</button>&nbsp;&nbsp;<button class="primary">主按钮</button>
+      </p>
+    </div>
+
+    <div class="dark-block">
+      <p>这是纯黑区块（#010409），用于验证「无大面积黑块残留」：切换白底黑字后应被扁平化为白底黑字。</p>
+    </div>
+
+    <div class="card" id="media">
+      <h2>媒体元素（不应被改色）</h2>
+      <p>下面的图片是页面内嵌的 SVG 图形，切换配色后它的颜色应保持原样：</p>
+      <img class="sample" alt="测试图片：渐变矩形与文字"
+           src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='800'%20height='200'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='0'%3E%3Cstop%20offset='0'%20stop-color='%23f97316'/%3E%3Cstop%20offset='1'%20stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='800'%20height='200'%20fill='url(%23g)'/%3E%3Ctext%20x='400'%20y='105'%20font-size='28'%20text-anchor='middle'%20fill='white'%20font-family='sans-serif'%3E%E5%9B%BE%E7%89%87%E5%86%85%E5%AE%B9%E4%B8%8D%E5%8F%97%E8%84%9A%E6%9C%AC%E5%BD%B1%E5%93%8D%3C/text%3E%3C/svg%3E">
+    </div>
+
+    <div class="grid">
+      <div class="card"><h2>卡片 A</h2><p>网格布局中的深色卡片。</p></div>
+      <div class="card"><h2>卡片 B</h2><p>切换后边框仍应可见。</p></div>
+      <div class="card"><h2>卡片 C</h2><p>阴影保留，结构不塌。</p></div>
+    </div>
+  </main>
+
+  <footer>页脚 · 深色背景 #010409 · Webpage Color Changer 演示页</footer>
+</body>
+</html>
