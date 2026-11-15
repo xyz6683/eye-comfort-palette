@@ -3,7 +3,7 @@
 用户脚本（Tampermonkey / Violentmonkey / Greasemonkey）。有些网站强制黑底白字，看久了眼睛累——
 用它一键把网页切换为**白底黑字**等护眼配色，选择按网站自动记忆，可随时恢复或停用。
 
-> 源码：GitHub 主仓库 <https://github.com/xyz6683/eye-comfort-palette> · Gitee 镜像 <https://gitee.com/xyz6683/eye-comfort-palette>
+> 源码：GitHub 主仓库 <https://github.com/xyz6683/eye-comfort-palette> · Gitee 镜像 <https://gitee.com/xyz6683/eye-comfort-palette> · Greasy Fork 发布页 <https://greasyfork.org/zh-CN/scripts/605606-网页配色切换器-webpage-color-changer>
 
 ## 特性
 
@@ -17,11 +17,13 @@
 
 ## 安装
 
+**一键安装**：<https://greasyfork.org/zh-CN/scripts/605606-网页配色切换器-webpage-color-changer>（点击「安装此脚本」）
+
+或手动安装：
+
 1. 安装脚本管理器：Tampermonkey（Chrome / Edge / Firefox）或 Violentmonkey
 2. 管理器面板 → 「添加新脚本」→ 全选粘贴 [eye-comfort-palette.user.js](eye-comfort-palette.user.js) 的全部内容 → 保存
 3. 刷新任意网页，右下角出现调色板按钮 🎨，点开即可切换配色
-
-> 发布到 Greasy Fork 时，直接上传 `eye-comfort-palette.user.js` 即可。
 
 ## 使用
 
@@ -98,8 +100,9 @@ git push github main && git push gitee main
 
 > Gitee 也可以用网页「导入已有仓库」一次性复制，之后在仓库页点「同步」。双远端推送则完全本地可控。
 
-**发布到 Greasy Fork**：新建脚本时选择从 GitHub 导入（`xyz6683/eye-comfort-palette`）；
-导入后在脚本页的同步设置里按提示配置 GitHub webhook，之后每次 push 到 main，脚本自动更新。
+**Greasy Fork 发布页**：<https://greasyfork.org/zh-CN/scripts/605606-网页配色切换器-webpage-color-changer>（已上线）
+
+- 脚本由 GitHub 导入（`xyz6683/eye-comfort-palette`）；若尚未配置自动同步，在脚本管理页的「同步」设置里配置 GitHub webhook 后，每次 push 到 main 即自动更新。
 
 ## 目录结构
 
